@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Envelope</title>
+	<link rel="stylesheet" href="envelope.css">
+</head>
+<body>
+
+	<div class="envelope">
+		<img src="/Pratice/images/envelope.jpg">
+		<div class="paper">
+            <h3>To Dennis</h3>
+            <div class="stamp">
+            </div>
+			<h1>My Commitment</h1>
+            <ul>
+                <li>I am to create a life that I am proud of.</li>
+                <li>I am to support and love the people around me.</li>
+                <li>I am to raise my children with love and understanding.</li>
+                <li>When I grow old I will have an appreciation for all life around me.</li>
+                <li>I will support my loved ones by using my skillset to earn a living as a software engineer.</li>
+            </ul>
+            <h1>Plan</h1>
+            <p>My plan is to become a frontend and mobile engineer with the help of my mentor. I will work hard to make this goal a reality to futher myself in my career!</p>
+            <h4>From James</h4>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$('.envelope').click(function(){
+			if ($(this).hasClass('open')) {
+				$(this).removeClass('open').animate({width: '500px', height: '300px'}, 500);
+				$('.paper').fadeOut();
+			} else {
+				$(this).addClass('open').animate({width: '500px', height: '350px'}, 500);
+				$('.paper').fadeIn();
+			}
+		});
+	</script>
+
+</body>
+</html>
